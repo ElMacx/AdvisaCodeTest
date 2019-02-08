@@ -1,25 +1,38 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import { InputTile } from "./Components/InputTile/InputTile";
+import { ResultTile } from "./Components/ResultTile/ResultTile";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      values: ["0", "0", "0"],
+    };
+  }
+
+  handleInputChange = event => {
+    const tmpArray = this.state.values;
+    tmpArray[event.currentTarget.id] = event.currentTarget.value;
+    this.setState({ values: tmpArray})
+  };
+
   render() {
+    const { values } = this.state;
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="app">
+        <h1>Advisa code test</h1>
+        {values.map((v, index) => {
+          return (
+            <InputTile
+              key={index}
+              id={index}
+              label={`Value ${index + 1} :`}
+              value={v}
+              handleInputChange={this.handleInputChange}
+            />);
+        })}
+        <ResultTile values={values}/>
       </div>
     );
   }

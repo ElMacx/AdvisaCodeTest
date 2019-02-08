@@ -1,0 +1,15 @@
+.input-tile {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #000000;
+  background-color: #8CCFFA;
+  display: inline-block;
+  margin: 25px 25px 25px 25px;
+  line-height: 200px;
+}
+
+.input-tile-input {
+  width: 30px;
+  margin-left: 10px;
+  border: 1px solid #000000;
+}
