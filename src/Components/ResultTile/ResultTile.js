@@ -10,15 +10,15 @@ export class ResultTile extends React.Component {
   }
 
   getFinalResult = () => {
-    if (this.state.operator === "+") {
-      return this.props.values.reduce((a, b) => parseInt(a) + parseInt(b), 0);
-    } else {
-      return this.props.values.reduce((a, b) => parseInt(a) * parseInt(b));
-    }
+    const retValue =
+      this.state.operator === "+"
+        ? this.props.values.reduce((a, b) => parseFloat(a) + parseFloat(b), 0)
+        : this.props.values.reduce((a, b) => parseFloat(a) * parseFloat(b));
+    return retValue % 1 ? retValue.toFixed(2) : retValue;
   };
 
   handleOperatorChange = event => {
-    this.setState({ operator: event.currentTarget.id })
+    this.setState({ operator: event.currentTarget.id });
   };
 
   render() {

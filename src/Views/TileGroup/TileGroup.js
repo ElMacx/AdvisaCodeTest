@@ -7,14 +7,14 @@ export class TileGroup extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      values: ["0", "0", "0"],
+      values: ["0", "0", "0"]
     };
   }
 
   handleInputChange = event => {
     const tmpArray = this.state.values;
     tmpArray[event.currentTarget.id] = event.currentTarget.value;
-    this.setState({ values: tmpArray})
+    this.setState({ values: tmpArray });
   };
 
   render() {
@@ -22,17 +22,20 @@ export class TileGroup extends Component {
     return (
       <div className="tile-group">
         <h1>Advisa code test</h1>
-        {values.map((v, index) => {
-          return (
-            <InputTile
-              key={index}
-              id={index}
-              label={`Value ${index + 1} :`}
-              value={v}
-              handleInputChange={this.handleInputChange}
-            />);
-        })}
-        <ResultTile values={values}/>
+        <div>
+          {values.map((v, index) => {
+            return (
+              <InputTile
+                key={index}
+                id={index}
+                label={`Value ${index + 1} :`}
+                value={v}
+                handleInputChange={this.handleInputChange}
+              />
+            );
+          })}
+          <ResultTile values={values} />
+        </div>
       </div>
     );
   }
