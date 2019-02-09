@@ -1,10 +1,10 @@
 import React from 'react';
-import "./InputTile.css";
+import "./InputBox.css";
 import { CustomInput } from "../CustomInput/CustomInput";
 
-export const InputTile = (props) => {
+export const InputBox = (props) => {
   return (
-    <div className="input-tile">
+    <div className="input-box">
       <CustomInput label={props.label} id={props.id} value={props.value} handleInputChange={props.handleInputChange}/>
     </div>
   )

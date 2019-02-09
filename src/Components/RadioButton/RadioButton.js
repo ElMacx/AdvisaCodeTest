@@ -1,7 +1,7 @@
 import React from 'react';
-import "./CustomRadio.css";
+import "./RadioButton.css";
 
-export const CustomRadio = (props) => {
+export const RadioButton = (props) => {
   return (
     <label className="custom-radio-label">
       <input

@@ -1,8 +1,8 @@
-.tile-group {
+.box-group {
   text-align: center;
 }
 
-.tile-container {
+.box-container {
   display: flex;
   justify-content: center;
   align-items: center;

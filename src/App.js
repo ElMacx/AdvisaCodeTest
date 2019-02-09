@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./App.css";
-import { TileGroup } from "./Views/TileGroup/TileGroup";
+import { BoxGroup } from "./Views/BoxGroup/BoxGroup";
 
 class App extends Component {
   render() {
-    return <TileGroup />;
+    return <BoxGroup />;
   }
 }
 

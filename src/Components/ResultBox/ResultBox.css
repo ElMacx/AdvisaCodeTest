@@ -1,8 +1,8 @@
-.input-tile {
+.result-box {
   width: 200px;
   height: 200px;
   border: 1px solid #000000;
-  background-color: #8CCFFA;
+  background-color: #F6C3CA;
   display: inline-block;
   margin: 25px 25px 25px 25px;
   line-height: 200px;

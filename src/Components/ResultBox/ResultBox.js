@@ -1,9 +1,9 @@
 import React from "react";
-import "./ResultTile.css";
-import { CustomRadio } from "../CustomRadio/CustomRadio";
+import "./ResultBox.css";
+import { RadioButton } from "../RadioButton/RadioButton";
 import { ADDITION, MULTIPLY } from "../../Tools/MathTools";
 
-export class ResultTile extends React.Component {
+export class ResultBox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,14 +25,14 @@ export class ResultTile extends React.Component {
 
   render() {
     return (
-      <div className="result-tile">
-        <CustomRadio
+      <div className="result-box">
+        <RadioButton
           label="Sum"
           handleOperatorChange={this.handleOperatorChange}
           id="+"
           operator={this.state.operator}
         />
-        <CustomRadio
+        <RadioButton
           label="Multitply"
           handleOperatorChange={this.handleOperatorChange}
           id="*"
