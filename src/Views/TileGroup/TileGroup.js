@@ -22,7 +22,7 @@ export class TileGroup extends Component {
     return (
       <div className="tile-group">
         <h1>Advisa code test</h1>
-        <div>
+        <div className="tile-container">
           {values.map((v, index) => {
             return (
               <InputTile

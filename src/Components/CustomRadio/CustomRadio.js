@@ -11,7 +11,7 @@ export const CustomRadio = (props) => {
         checked={props.operator === props.id}
         onChange={props.handleOperatorChange}
       />
-    {props.label}
+    <span onclick={props.handleOperatorChange}>{props.label}</span>
     </label>
   )
 }
