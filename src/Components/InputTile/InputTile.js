@@ -1,13 +1,11 @@
 import React from 'react';
 import "./InputTile.css";
+import { CustomInput } from "../CustomInput/CustomInput";
 
 export const InputTile = (props) => {
   return (
     <div className="input-tile">
-      <label>
-        {props.label}
-        <input id={props.id} className="input-tile-input" value={props.value} onChange={props.handleInputChange}/>
-      </label>
+      <CustomInput label={props.label} id={props.id} value={props.value} handleInputChange={props.handleInputChange}/>
     </div>
   )
 }
