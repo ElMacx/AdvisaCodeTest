@@ -12,9 +12,7 @@ export class BoxGroup extends Component {
   }
 
   handleInputChange = event => {
-    const tmpArray = this.state.values;
-    tmpArray[event.currentTarget.id] = event.currentTarget.value;
-    this.setState({ values: tmpArray });
+    this.setState({ values: this.state.values.map((value, id) => id === parseInt(event.currentTarget.id) ? event.currentTarget.value : value) });
   };
 
   render() {
