@@ -6,15 +6,14 @@ import { ResultBox } from "../../Components/ResultBox/ResultBox";
 export const BoxGroup = () => {
   const [values, setValues] = useState(["0", "0", "0"]);
 
-  function modifyArrayValueFromIndex(array, { targetIndex, targetValue }) {
-    return array.map((value, index) =>
-      index === parseInt(targetIndex) ? targetValue : value
-    );
-  }
-
   function handleInputChange(event) {
+    const updateArrayFromIndex = (array, { targetIndex, targetValue }) => {
+      return array.map((value, index) =>
+        index === parseInt(targetIndex) ? targetValue : value
+      );
+    };
     setValues(
-      modifyArrayValueFromIndex(values, {
+      updateArrayFromIndex(values, {
         targetIndex: event.currentTarget.id,
         targetValue: event.currentTarget.value
       })
