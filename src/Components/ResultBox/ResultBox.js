@@ -30,7 +30,7 @@ export const ResultBox = props => {
         id="*"
         operator={operator}
       />
-    <span>Result: {getFinalResult()}</span>
+      <span>Result: {getFinalResult()}</span>
     </div>
   );
 };
