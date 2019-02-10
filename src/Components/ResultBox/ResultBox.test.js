@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { ResultBox } from "./ResultBox";
-import { CustomRadio } from "../CustomRadio/CustomRadio";
+import { RadioButton } from "../RadioButton/RadioButton";
 
 import Adapter from "enzyme-adapter-react-16";
 import { shallow, configure } from "enzyme";
@@ -13,6 +13,6 @@ describe('ResultBox', () => {
     expect(ResultBox).toBeDefined();
   });
   it("CustomRadio should be defined", () => {
-    expect(CustomRadio).toBeDefined();
+    expect(RadioButton).toBeDefined();
   });
 })

@@ -1,20 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { CustomRadio } from "./CustomRadio";
+import { RadioButton } from "./RadioButton";
 
 import Adapter from "enzyme-adapter-react-16";
 import { shallow, configure } from "enzyme";
 
 configure({ adapter: new Adapter() });
 
-describe('CustomRadio', () => {
+describe('RadioButton', () => {
   it("Radio button should be defined", () => {
-    expect(CustomRadio).toBeDefined();
+    expect(RadioButton).toBeDefined();
   });
   it("Radio button click should call the click method", () => {
     const mockCallBack = jest.fn();
     const wrapper = shallow(
-      <CustomRadio
+      <RadioButton
           operator="+"
           id="+"
           handleOperatorChange={mockCallBack}
@@ -31,7 +31,7 @@ describe('CustomRadio', () => {
       value = true;
     };
     const wrapper = shallow(
-      <CustomRadio
+      <RadioButton
           handleOperatorChange={mockCallBack}
           isSelected={value}
       />
